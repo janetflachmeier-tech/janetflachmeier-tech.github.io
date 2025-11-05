@@ -234,24 +234,33 @@ footer p {
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 .Column_tall {
     padding-top: 3.5%;
-    height: 500px; /* Increased height to accommodate enhanced form */
+    height: 600px; /* Increased height to accommodate enhanced form */
+    overflow-y: auto; /* Add scroll if content exceeds height */
 }
 
 /* This class is applied to make the left column in contact section match the height of the right column */
 #Contact .Column_2 {
-    height: 500px; /* Match the Column_tall height */
+    height: 600px; /* Match the Column_tall height */
     padding-top: 3.5%;
+    overflow-y: auto; /* Add scroll if content exceeds height */
 }
 
 /* Additional styling for better contact section balance */
 #Contact .Column_1 {
-    padding: 20px;
+    padding: 15px; /* Reduced padding to give more space to form */
     box-sizing: border-box;
 }
 
 #Contact .Column_2 {
     padding: 20px;
     box-sizing: border-box;
+}
+
+/* Optimize contact section heading */
+#Contact .Column_1 h1 {
+    margin-top: 0; /* Remove top margin to save space */
+    margin-bottom: 15px; /* Reduce bottom margin */
+    font-size: 24px; /* Slightly smaller font for better fit */
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
@@ -308,11 +317,13 @@ input[type=submit]:hover {
 form {
     border-radius: 5px; /* Rounds the corners of the contact form */
     background-color: #f2f2f2; 
-    padding: 20px; /* Increased padding for better spacing */
+    padding: 15px; /* Optimized padding for better fit */
     font-family: "Trebuchet MS", Optima;
-    margin: 10px 0; /* Add margin for better spacing */
+    margin: 5px 0; /* Reduced margin for better spacing */
     max-width: 100%; /* Ensure form doesn't exceed container */
     box-sizing: border-box; /* Include padding in width calculation */
+    height: auto; /* Allow form to adjust its height */
+    overflow: visible; /* Ensure content is visible */
 }
 /***** END OF CONTACT FORM STYLING *****/
 
@@ -398,16 +409,17 @@ form {
 
 /* Enhanced form group styling */
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced margin for better fit */
     position: relative;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 3px; /* Reduced margin */
     font-weight: bold;
     color: #333;
     font-family: "Trebuchet MS", Optima;
+    font-size: 14px; /* Slightly smaller font for better fit */
 }
 
 /* Enhanced input styling */
@@ -415,12 +427,12 @@ input[type="text"],
 input[type="email"], 
 textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px; /* Slightly reduced padding */
     border: 2px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
     font-family: Perpetua, Rockwell Extra Bold;
-    font-size: 16px;
+    font-size: 14px; /* Slightly smaller font */
     transition: all 0.3s ease;
     background-color: white;
 }
@@ -437,7 +449,8 @@ textarea:focus {
 /* Enhanced textarea styling */
 textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 80px; /* Reduced minimum height */
+    max-height: 120px; /* Add maximum height to prevent overflow */
     font-family: Perpetua, Rockwell Extra Bold;
 }
 
@@ -446,14 +459,14 @@ textarea {
     background: linear-gradient(135deg, #333333, #555555);
     color: white;
     font-weight: bold;
-    padding: 15px 30px;
+    padding: 12px 25px; /* Slightly reduced padding */
     border: none;
     border-radius: 6px;
     cursor: pointer;
     display: block;
-    margin: 20px auto 0;
+    margin: 15px auto 0; /* Reduced top margin */
     font-family: "Trebuchet MS", Optima;
-    font-size: 16px;
+    font-size: 14px; /* Slightly smaller font */
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
