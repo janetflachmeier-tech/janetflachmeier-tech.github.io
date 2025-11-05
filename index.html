@@ -4,8 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
-        <title>Janet Flachmeier </title>
+        <title>Janet Flachmeier - Portfolio</title>
         <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+        <!-- Add JavaScript file -->
+        <script src="js/portfolio.js" defer></script>
     </head>
 
     <!--Body-->
@@ -97,15 +99,24 @@
             <!--Contact form, right column-->
             <div class="Column_1 Column_tall">
                 <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                <!--Enhanced contact form with validation-->
+                <form action="" method="POST" novalidate> 
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Please enter your name here" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Email">Email:</label>
+                        <input type="email" id="Email" name="Email" placeholder="Please enter your email here" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Message">Message:</label>
+                        <textarea id="Message" name="Message" placeholder="Please write your message here" rows="5" required></textarea>
+                    </div>
+                    
+                    <input type="submit" value="SEND MESSAGE" class="submit-btn">
                 </form>
             </div>
         </div>
